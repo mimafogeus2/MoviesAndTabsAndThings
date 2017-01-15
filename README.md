@@ -2,6 +2,7 @@
 ---------------------------
 
 **What we've got here?**
+
 A test task I've got at a job interview. This includes:
 
  - API calls to OMDB
