@@ -1,0 +1,218 @@
+body {
+	background: repeating-linear-gradient(
+    45deg,
+    #fcfcfc,
+    #fcfcfc 10px,
+    #f8f8f8 10px,
+    #f8f8f8 20px
+  );
+	font-family: sans-serif;
+}
+
+.App {
+	display: flex;
+	justify-content: center;
+}
+
+.App__container {
+	box-shadow: rgba(0, 0, 0, 0.1) 0 5px 5px 0;
+	margin: 50px 0;
+	width: 800px;
+}
+
+.SearchBar__container {
+	align-items: center;	
+	background-color: #bbb;
+	border-radius: 5px 5px 0 0;
+	display: flex;
+	padding: 5px 10px;
+}
+
+.SearchBar__container label, .SearchBar__container input {
+	display: block;
+}
+
+.SearchBar__container__label {
+	font-size: 16px;
+	font-weight: bold;
+	margin-right: 7px;
+}
+
+.SearchBar__container__input {
+	border: 1px solid #aaa;
+	border-radius: 3px;
+	font-size: 16px;
+	outline: none;
+	padding: 1px 5px;
+}
+
+/* Prevent yellow background when autocompleting in Chrome */
+.SearchBar__container__input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+.SearchBar__container__submit {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	font-size: 18px;
+	outline: none;
+}
+
+.tabs {
+	background-color: #ccc;
+	display: flex;
+	flex-direction: column;
+	min-height: 100px;
+	width: 100%;
+}
+
+.tabsList {
+	background-color: #bbb;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.tabsList__item {
+	background-color: #ccc;
+	border: 1px solid #bbb;
+	border-left: none;
+	border-radius: 5px 5px 0 0;
+	cursor: pointer;
+	display: block;
+	flex-grow: 1;
+	position: relative;	
+	text-align: center;
+	transition: background 0.2s ease, border 0.2s ease;
+}
+
+.tabsList__item:hover {
+	background-color: #ddd;
+	border-bottom-color: #ddd;
+}
+
+.tabsList__item:first-child {
+	border-left: 1px solid #bbb;
+}
+
+.tabsList__item a {
+	color: #000;
+	display: block;
+	text-decoration: none;
+}
+
+.tabsList__item--selected {
+	background-color: #eee;
+	border-bottom: none;
+	cursor: default;
+}
+
+.tabsList__item--selected:first-child {
+	border-left: 1px solid #eee;
+}
+
+.tabsList__item--selected:last-child {
+	border-right: 1px solid #eee;
+}
+
+.tabsList__item--selected:hover {
+	background-color: #eee;
+}
+
+.tabsList__item__closeButton {
+	cursor: pointer;
+	font-size: 10px;
+	opacity: 0;
+	position: absolute;
+	right: 5px;
+	top: 3px;
+	transition: opacity 0.2s ease;
+}
+
+.tabsList__item:hover .tabsList__item__closeButton {
+	opacity: 1;
+}
+
+.tabsList__item__closeButton:before {
+	content: '✕';
+}
+
+.tab {
+	background-color: #eee;
+	flex-grow: 1;
+}
+
+.tab__searchResults {
+	margin: 15px 0;
+}
+
+.tab__searchResults__title {
+	margin: 0 0 0 15px;
+}
+
+.tab__searchResults__list {
+	list-style: none;
+	margin-top: 15px;
+	padding: 0;
+}
+
+.tab__searchResults__list__result {
+	background-color: #ccc;
+	cursor: pointer;
+	padding: 3px 5px;
+}
+
+.tab__searchResults__list__result:nth-child(even) {
+	background-color: #ddd;
+}
+
+.tab__searchResults__list__result:hover {
+	background-color: #888;
+	color: #fff;
+}
+
+.tab__searchResults__list__result--movie:before,
+.tab__searchResults__list__result--series:before,
+.tab__searchResults__list__result--episode:before {
+	margin-right: 5px;
+}
+
+.tab__searchResults__list__result--movie:before {
+	content: '🎞';
+}
+
+.tab__searchResults__list__result--series:before, .tab__searchResults__list__result--episode:before {
+	content: '📺';
+}
+
+.tab__movieData__title {
+	color: #888;
+	cursor: pointer;
+	display: block;
+	margin: 0 20px;
+}
+
+/* Reverse instead of normal DOM order because I prefer the placement of text before a large image
+	 when accessibility features and other limitations force vertical positioning */
+.tab__movieData__dataContainer {
+	display: flex;
+	flex-direction: row-reverse;
+	padding: 0 20px 20px;
+}
+
+.tab__movieData__dataContainer > div {
+	flex-grow: 1;
+}
+
+.tab__movieData__dataContainer p:first-child {
+	margin-top: 0;
+}
+
+.tab__movieData__dataContainer__textualData {
+	padding-left: 20px;
+}
+
+.tab__movieData__dataContainer__textualData:only-child {
+	padding-left: 0;
+}
