@@ -35,6 +35,7 @@ Things that should be added
  - **Testing on multiple devices**, especially mobile.
  - **Autosuggestion** for search.
  - **Saving the tabs' state when reopening the tab**. Could be done using LocalStorage.
+ - A **base Tab object** to extend. This will allow for basic tools, guidelines and uniformity.
  - maybe **More informative route names**.
  - **Indication for when the search button is pressed**.
  - More color :(
