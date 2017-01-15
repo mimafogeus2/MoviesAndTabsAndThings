@@ -10,7 +10,7 @@ class MovieDetailsTab extends Component {
 
 	_getPoster() {
 		if (this.state.movieData.poster === null) {
-			return null
+			return null;
 		}
 
 		return <div>
@@ -41,7 +41,7 @@ class MovieDetailsTab extends Component {
 	_getGenres() {
 		if (this.state.movieData.genres && this.state.movieData.genres.length) {
 			const genreTitle = this.state.movieData.genres.length === 1 ? 'Genre' : 'Genres';
-			return <p>{genreTitle}: <strong>{this.state.movieData.genres.join(', ')}</strong></p>
+			return <p>{genreTitle}: <strong>{this.state.movieData.genres.join(', ')}</strong></p>;
 		}
 
 		return null;
@@ -52,7 +52,6 @@ class MovieDetailsTab extends Component {
 			if (err) {
 				console.error(err);
 			} else {
-				console.log(movie);
 				this.setState({movieData: movie});
 			}
 		})	
@@ -78,7 +77,7 @@ class MovieDetailsTab extends Component {
 				</div>
 				{this._getPoster()}
 			</div>
-		</div>
+		</div>;
 	}
 }
 

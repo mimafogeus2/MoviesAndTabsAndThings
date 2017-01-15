@@ -39,7 +39,7 @@ class Tabs extends Component {
 			return null;
 		}
 
-		return <Tab {...currentTabData} addTabFunction={this.addTab} />
+		return <Tab {...currentTabData} addTabFunction={this.addTab} />;
 	}
 
 	_getCurrentTabData() {

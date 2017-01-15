@@ -16,9 +16,7 @@ class TabsListItem extends Component {
 		</li>;
 	}
 
-	_onCloseTab = () => {
-		this.props.onCloseTab(this.props.id)
-	}
+	_onCloseTab = () => this.props.onCloseTab(this.props.id);
 }
 
 export default TabsListItem;

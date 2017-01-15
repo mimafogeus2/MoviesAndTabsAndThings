@@ -24,6 +24,7 @@ Choices
  - **Interface locking when search is active**. This is a quick and dirty solution to prevent unexpected behavior with multiple parallel searches. Optimally, a tab should handle more of the search process and have a **loading state**, which will also provide a more intuitive user experience.
  - **create-react-app** as a quickstart.
  - **Ready-made code for fetching data from OMDB**.
+ - **BEM** to help with proper CSS scoping.
 
 Things that should be added
 ---------------------------
@@ -38,6 +39,7 @@ Things that should be added
  - A **base Tab object** to extend. This will allow for basic tools, guidelines and uniformity.
  - maybe **More informative route names**.
  - **Indication for when the search button is pressed**.
+ - **Separate CSS files per component**. Also, using **CSS modules** instead of BEM.
  - More color :(
    - Maybe the background could be a blurred poster from a random popular movie or from past search results.
 

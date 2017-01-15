@@ -7,7 +7,6 @@ class SearchResultsTab extends Component {
 	_getRecordRows = () => this.props.data.map((x) => this._getRecord(x));
 
 	_getRecord = (x) => {
-		console.log(x)
 		const recordData = this.props.data.find((record) => x.imdb === record.imdb)
 		const classes = cx({
 			'tab__searchResults__list__result': true,
